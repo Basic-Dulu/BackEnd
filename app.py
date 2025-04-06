@@ -15,7 +15,7 @@ def hello():
         examples:
           application/json: { "message": "Hello, World!" }
     """
-    return jsonify(message="Hello, Putri Laura Cantik!")
+    return jsonify(message="Hello, Putri Laura!")
 
 if __name__ == '__main__':
     app.run(debug=True)
