@@ -1,4 +1,7 @@
-from flask import Blueprint, jsonify
+from flask import Blueprint, make_response
+from app.models.user import User
+
+import json
 
 user_bp = Blueprint('user', __name__, url_prefix='/users')
 
@@ -13,5 +16,5 @@ def get_users():
             examples:
                 pplication/json: { "users": ["Putri", "Laura", "Alzam"] }
     """
-    users = ["Putri", "Laura", "Wadidaw"]
-    return jsonify(users=users)
+    users = [user.to_dict() for user in User.query.order_by(User.id.asc()).all()]
+    return make_response(json.dumps({"users": users}, indent=4), 200)
