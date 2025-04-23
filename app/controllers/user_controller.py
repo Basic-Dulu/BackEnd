@@ -1,5 +1,6 @@
-from flask import Blueprint, make_response
+from flask import Blueprint, make_response, jsonify
 from app.models.user import User
+from collections import OrderedDict
 
 import json
 
@@ -17,4 +18,15 @@ def get_users():
                 pplication/json: { "users": ["Putri", "Laura", "Alzam"] }
     """
     users = [user.to_dict() for user in User.query.order_by(User.id.asc()).all()]
-    return make_response(json.dumps({"users": users}, indent=4), 200)
+
+    response = OrderedDict()
+    response["success"] = True
+    response["message"] = "Data fetched successfully"
+    response["data"] = users
+    # return make_response(json.dumps({"users": users}, indent=4), 200)
+    # return jsonify({
+    #     "success": True,
+    #     "message": "Users fetched successfully",
+    #     "data": users
+    # })
+    return jsonify(response)

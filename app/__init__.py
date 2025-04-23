@@ -2,6 +2,7 @@ from flask import Flask
 from flasgger import Swagger
 from config import Config
 from flask_sqlalchemy import SQLAlchemy
+from flask_cors import CORS
 
 import os
 
@@ -16,6 +17,8 @@ def create_app():
     # Initialize Swagger
     db.init_app(app)
     Swagger(app)
+    CORS(app, resources={r"/*": {"origins": "http://localhost:3000"}})
+
 
     # Register all blueprints
     from app.routes import register_blueprints
