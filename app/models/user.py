@@ -1,17 +1,21 @@
 from app import db
 from collections import OrderedDict
 
+
 class User(db.Model):
-    __tablename__ = 'users'
+    __tablename__ = "users"
 
     id = db.Column(db.Integer, primary_key=True)
-    username = db.Column(db.String(100), nullable=False)
     email = db.Column(db.String(100), unique=True, nullable=False)
+    username = db.Column(db.String(100), nullable=False)
+    password = db.Column(db.String(100), nullable=False)
+    gender = db.Column(db.String(100), nullable=False)
 
-    # converting the model to JSON format friendly
     def to_dict(self):
-        return OrderedDict([
-        ("id", self.id),
-        ("username", self.username),
-        ("email", self.email)
-    ])
+        return {
+            "id": self.id,
+            "email": self.email,
+            "username": self.username,
+            "password": self.password,
+            "gender": self.gender,
+        }
