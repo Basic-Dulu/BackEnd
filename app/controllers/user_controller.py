@@ -1,9 +1,11 @@
 from flask import Blueprint, request, jsonify, current_app
 from app.models.user import User, db
 from collections import OrderedDict
+from werkzeug.utils import secure_filename
 
 import jwt
 import datetime
+import os
 
 user_bp = Blueprint("user", __name__, url_prefix="/users")
 
@@ -142,3 +144,26 @@ def login_user():
         ),
         200,
     )
+
+
+
+@user_bp.route("/upload", methods=["POST"])
+def upload_image():
+    if "image" not in request.files:
+        return jsonify({"success": False, "message": "No file part"}), 400
+
+    file = request.files["image"]
+    if file.filename == "":
+        return jsonify({"success": False, "message": "No selected file"}), 400
+
+    if file and allowed_file(file.filename):
+        filename = secure_filename(file.filename)
+        upload_path = os.path.join(current_app.root_path, "static/uploads", filename)
+        file.save(upload_path)
+        file_url = f"{request.host_url}static/uploads/{filename}"
+        return jsonify({"success": True, "file_url": file_url}), 201
+
+    return jsonify({"success": False, "message": "File type not allowed"}), 400
+
+def allowed_file(filename):
+    return '.' in filename and filename.rsplit('.', 1)[1].lower() in current_app.config['ALLOWED_EXTENSIONS']

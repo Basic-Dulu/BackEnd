@@ -6,3 +6,6 @@ class Config:
         "DATABASE_URI", "mysql+mysqlconnector://root:admin@localhost:3306/basic_dulu_db"
     )
     SQLALCHEMY_TRACK_MODIFICATIONS = False
+
+    UPLOAD_FOLDER = os.path.join("static", "uploads")
+    ALLOWED_EXTENSIONS = {"png", "jpg", "jpeg", "gif"}

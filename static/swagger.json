@@ -5,12 +5,15 @@
         "version": "1.0.0"
     },
     "basePath": "/users",
+    "schemes": ["http"],
+    "consumes": ["application/json"],
+    "produces": ["application/json"],
     "securityDefinitions": {
         "Bearer": {
             "type": "apiKey",
             "name": "Authorization",
             "in": "header",
-            "description": "Enter your Bearer token in the format: Bearer {the_token}"
+            "description": "Enter your Bearer token in the format: Bearer {your_token}"
         }
     },
     "paths": {
@@ -32,25 +35,12 @@
                         "required": true,
                         "schema": {
                             "type": "object",
-                            "required": [
-                                "email",
-                                "username",
-                                "password",
-                                "gender"
-                            ],
+                            "required": ["email", "username", "password", "gender"],
                             "properties": {
-                                "email": {
-                                    "type": "string"
-                                },
-                                "username": {
-                                    "type": "string"
-                                },
-                                "password": {
-                                    "type": "string"
-                                },
-                                "gender": {
-                                    "type": "string"
-                                }
+                                "email": { "type": "string" },
+                                "username": { "type": "string" },
+                                "password": { "type": "string" },
+                                "gender": { "type": "string" }
                             }
                         }
                     }
@@ -80,6 +70,11 @@
                         "description": "The ID of the user to retrieve"
                     }
                 ],
+                "security": [
+                    {
+                        "Bearer": []
+                    }
+                ],
                 "responses": {
                     "200": {
                         "description": "User found"
@@ -87,24 +82,13 @@
                     "404": {
                         "description": "User not found"
                     }
-                },
-                "security": [
-                    {
-                        "Bearer": []
-                    }
-                ]
+                }
             }
         },
         "/login": {
             "post": {
                 "summary": "Login user",
                 "description": "Logs a user in and returns a JWT token.",
-                "consumes": [
-                    "application/json"
-                ],
-                "produces": [
-                    "application/json"
-                ],
                 "parameters": [
                     {
                         "in": "body",
@@ -112,17 +96,10 @@
                         "required": true,
                         "schema": {
                             "type": "object",
-                            "required": [
-                                "email",
-                                "password"
-                            ],
+                            "required": ["email", "password"],
                             "properties": {
-                                "email": {
-                                    "type": "string"
-                                },
-                                "password": {
-                                    "type": "string"
-                                }
+                                "email": { "type": "string" },
+                                "password": { "type": "string" }
                             }
                         }
                     }
@@ -136,6 +113,38 @@
                     },
                     "401": {
                         "description": "Invalid email or password"
+                    }
+                }
+            }
+        },
+        "/upload-image": {
+            "post": {
+                "summary": "Upload an image",
+                "consumes": ["multipart/form-data"],
+                "produces": ["application/json"],
+                "parameters": [
+                    {
+                        "in": "formData",
+                        "name": "image",
+                        "type": "file",
+                        "required": true,
+                        "description": "Image file to upload"
+                    }
+                ],
+                "responses": {
+                    "201": {
+                        "description": "Upload successful",
+                        "schema": {
+                            "type": "object",
+                            "properties": {
+                                "success": { "type": "boolean" },
+                                "message": { "type": "string" },
+                                "url": { "type": "string" }
+                            }
+                        }
+                    },
+                    "400": {
+                        "description": "Invalid input"
                     }
                 }
             }
