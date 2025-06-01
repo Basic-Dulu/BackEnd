@@ -37,7 +37,10 @@ def get_user_by_id(user_id):
     except jwt.InvalidTokenError:
         return jsonify({"success": False, "message": "Invalid token"}), 401
 
-    user = User.query.get(user_id)
+    if payload["user_id"] != user_id:
+        return jsonify({"success": False, "message": "Unauthorized access"}), 403
+
+    user = User.query.get(payload["user_id"])
 
     if not user:
         return jsonify({"success": False, "message": "User not found"}), 404
@@ -144,26 +147,3 @@ def login_user():
         ),
         200,
     )
-
-
-
-@user_bp.route("/upload", methods=["POST"])
-def upload_image():
-    if "image" not in request.files:
-        return jsonify({"success": False, "message": "No file part"}), 400
-
-    file = request.files["image"]
-    if file.filename == "":
-        return jsonify({"success": False, "message": "No selected file"}), 400
-
-    if file and allowed_file(file.filename):
-        filename = secure_filename(file.filename)
-        upload_path = os.path.join(current_app.root_path, "static/uploads", filename)
-        file.save(upload_path)
-        file_url = f"{request.host_url}static/uploads/{filename}"
-        return jsonify({"success": True, "file_url": file_url}), 201
-
-    return jsonify({"success": False, "message": "File type not allowed"}), 400
-
-def allowed_file(filename):
-    return '.' in filename and filename.rsplit('.', 1)[1].lower() in current_app.config['ALLOWED_EXTENSIONS']
