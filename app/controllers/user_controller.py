@@ -1,21 +1,15 @@
-from flask import Blueprint, request, jsonify
+from flask import Blueprint, request, jsonify, current_app
 from app.models.user import User, db
 from collections import OrderedDict
+
+import jwt
+import datetime
 
 user_bp = Blueprint("user", __name__, url_prefix="/users")
 
 
 @user_bp.route("/", methods=["GET"])
 def get_users():
-    """
-    Get all users.
-    ---
-    responses:
-        200:
-            description: A list of users
-            examples:
-                application/json: { "users": [{"id": 1, "username": "Putri", "email": "putri@example.com"}] }
-    """
     users = [user.to_dict() for user in User.query.order_by(User.id.asc()).all()]
 
     response = OrderedDict(
@@ -25,47 +19,36 @@ def get_users():
     return jsonify(response)
 
 
+@user_bp.route("/<int:user_id>", methods=["GET"])
+def get_user_by_id(user_id):
+    auth_header = request.headers.get("Authorization")
+    if not auth_header or not auth_header.startswith("Bearer "):
+        return jsonify({"success": False, "message": "Missing or Invalid token"}), 401
+
+    token = auth_header.split(" ")[1]
+    try:
+        payload = jwt.decode(
+            token, current_app.config["SECRET_KEY"], algorithms=["HS256"]
+        )
+    except jwt.ExpiredSignatureError:
+        return jsonify({"success": False, "message": "Token expired"}), 401
+    except jwt.InvalidTokenError:
+        return jsonify({"success": False, "message": "Invalid token"}), 401
+
+    user = User.query.get(user_id)
+
+    if not user:
+        return jsonify({"success": False, "message": "User not found"}), 404
+
+    return (
+        jsonify({"success": True, "message": "User found", "data": user.to_dict()}),
+        200,
+    )
+
+
 # for create new user
 @user_bp.route("/", methods=["POST"])
 def create_user():
-    """
-    Create a new user.
-    ---
-    tags:
-        - Users
-    parameters:
-      - in: body
-        name: body
-        required: true
-        schema:
-          id: User
-          required:
-            - username
-            - email
-          properties:
-            email:
-                type: string
-                example: putri@example.com
-            username:
-              type: string
-              example: putri
-            password:
-              type: string
-              example: passwordexample123
-            gender:
-              type: string
-              example: Female
-    responses:
-      201:
-        description: User created successfully
-      400:
-        description: Invalid input
-      409:
-        description: Email already exists
-      409:
-        description: Username already exists
-    """
-
     data = request.get_json()
     email = data.get("email")
     username = data.get("username")
@@ -118,4 +101,44 @@ def create_user():
             }
         ),
         201,
+    )
+
+
+# for login
+@user_bp.route("/login", methods=["POST"])
+def login_user():
+    data = request.get_json()
+    email = data.get("email")
+    password = data.get("password")
+
+    if not email or not password:
+        return (
+            jsonify({"succes": False, "message": "email and password are required!"}),
+            400,
+        )
+
+    found_user = User.query.filter_by(email=email).first()
+
+    if not found_user or found_user.password != password:
+        return jsonify({"success": False, "message": "Email or Password is Invalid!"})
+
+    token = jwt.encode(
+        {
+            "user_id": found_user.id,
+            "user_name": found_user.username,
+            "exp": datetime.datetime.now() + datetime.timedelta(hours=1),
+        },
+        current_app.config["SECRET_KEY"],
+        algorithm="HS256",
+    )
+
+    return (
+        jsonify(
+            {
+                "succes": True,
+                "message": "Login Successfull",
+                "token": token,
+            }
+        ),
+        200,
     )
