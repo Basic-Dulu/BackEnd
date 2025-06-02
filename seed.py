@@ -1,5 +1,7 @@
-from app import create_app, db
+from run import create_app
+from app.extensions import db
 from seeds.seed_users import seed_users
+
 # from seeds.seed_posts import seed_posts (when you make it)
 
 app = create_app()

@@ -6,36 +6,41 @@ from flask_cors import CORS
 from config import Config
 from dotenv import load_dotenv
 
+# from app import create_app
+
 import os
 
+def create_app():
+    app = Flask(__name__)
 
-load_dotenv()
+    load_dotenv()
 
-app = Flask(__name__)
-app.config.from_object(Config)
-app.config["SECRET_KEY"] = os.getenv("SECRET_KEY")
-
-
-SWAGGER_URL = "/swagger"
-API_URL = "/static/swagger.json"
-
-swagger_ui_blueprint = get_swaggerui_blueprint(
-    SWAGGER_URL, API_URL, config={"app_name": "Access API"}
-)
-app.register_blueprint(swagger_ui_blueprint, url_prefix=SWAGGER_URL)
+    app.config.from_object(Config)
+    app.config["SECRET_KEY"] = os.getenv("SECRET_KEY")
 
 
-@app.route("/")
-def home():
-    return jsonify({"Message": "app up and running successfully"})
+    SWAGGER_URL = "/swagger"
+    API_URL = "/static/swagger.json"
+
+    swagger_ui_blueprint = get_swaggerui_blueprint(
+        SWAGGER_URL, API_URL, config={"app_name": "Access API"}
+    )
+    app.register_blueprint(swagger_ui_blueprint, url_prefix=SWAGGER_URL)
 
 
-db.init_app(app)
-CORS(app, resources={r"/*": {"origins": "http://localhost:3000"}})
+    @app.route("/")
+    def home():
+        return jsonify({"Message": "app up and running successfully"})
 
-# Register all blueprints
-register_blueprints_routes(app)
+
+    db.init_app(app)
+    CORS(app, resources={r"/*": {"origins": "http://localhost:3000"}})
+
+    # Register all blueprints
+    register_blueprints_routes(app)
+
+    return app
 
 
 if __name__ == "__main__":
-    app.run(host="0.0.0.0", port=8080)
+    create_app().run(host="0.0.0.0", port=8080)
