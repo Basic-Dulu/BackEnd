@@ -1,5 +1,4 @@
 from app.extensions import db
-from collections import OrderedDict
 
 
 class User(db.Model):

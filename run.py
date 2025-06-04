@@ -10,6 +10,7 @@ from dotenv import load_dotenv
 
 import os
 
+
 def create_app():
     app = Flask(__name__)
 
@@ -17,7 +18,6 @@ def create_app():
 
     app.config.from_object(Config)
     app.config["SECRET_KEY"] = os.getenv("SECRET_KEY")
-
 
     SWAGGER_URL = "/swagger"
     API_URL = "/static/swagger.json"
@@ -27,11 +27,9 @@ def create_app():
     )
     app.register_blueprint(swagger_ui_blueprint, url_prefix=SWAGGER_URL)
 
-
     @app.route("/")
     def home():
         return jsonify({"Message": "app up and running successfully"})
-
 
     db.init_app(app)
     CORS(app, resources={r"/*": {"origins": "http://localhost:3000"}})
