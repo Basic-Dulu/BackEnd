@@ -15,6 +15,13 @@ class ProductTypeDetail(db.Model):
         db.Integer, db.ForeignKey("skincare_categories.id"), nullable=False
     )
 
+    def to_dict(self):
+        return {
+            "id": self.id,
+            "description": self.description,
+            "product_type": self.product_type.to_dict() if self.product_type else None,
+        }
+
     # products = db.relationship(
     #     "Product", backref="product_type", cascade="all, delete-orphan"
     # )

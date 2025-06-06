@@ -1,13 +1,23 @@
 {
     "swagger": "2.0",
     "info": {
-        "title": "User API",
+        "title": "User & Skincare Category API",
         "version": "1.0.0"
     },
-    "basePath": "/users",
+    "basePath": "/",
     "schemes": ["http"],
     "consumes": ["application/json"],
     "produces": ["application/json"],
+    "tags": [
+        {
+            "name": "User",
+            "description": "Endpoints related to user registration, authentication, and profile."
+        },
+        {
+            "name": "Skincare Category",
+            "description": "Endpoints related to skincare categories and their details."
+        }
+    ],
     "securityDefinitions": {
         "Bearer": {
             "type": "apiKey",
@@ -17,8 +27,9 @@
         }
     },
     "paths": {
-        "/": {
+        "/users": {
             "get": {
+                "tags": ["User"],
                 "summary": "Get all users",
                 "responses": {
                     "200": {
@@ -27,6 +38,7 @@
                 }
             },
             "post": {
+                "tags": ["User"],
                 "summary": "Create a new user",
                 "parameters": [
                     {
@@ -58,8 +70,9 @@
                 }
             }
         },
-        "/{user_id}": {
+        "/users/{user_id}": {
             "get": {
+                "tags": ["User"],
                 "summary": "Get a user by ID",
                 "parameters": [
                     {
@@ -85,8 +98,9 @@
                 }
             }
         },
-        "/login": {
+        "/users/login": {
             "post": {
+                "tags": ["User"],
                 "summary": "Login user",
                 "description": "Logs a user in and returns a JWT token.",
                 "parameters": [
@@ -119,6 +133,7 @@
         },
         "/upload-image": {
             "post": {
+                "tags": ["User"],
                 "summary": "Upload an image",
                 "consumes": ["multipart/form-data"],
                 "produces": ["application/json"],
@@ -145,6 +160,42 @@
                     },
                     "400": {
                         "description": "Invalid input"
+                    }
+                }
+            }
+        },
+        "/skincare-categories": {
+            "get": {
+                "tags": ["Skincare Category"],
+                "summary": "Get all skincare categories",
+                "description": "Fetches a list of all skincare categories including ID, name, description, benefit, and how to use.",
+                "responses": {
+                    "200": {
+                        "description": "A list of skincare categories"
+                    }
+                }
+            }
+        },
+        "/skincare-categories/{id}": {
+            "get": {
+                "tags": ["Skincare Category"],
+                "summary": "Get a skincare category by ID",
+                "description": "Fetch a skincare category by its ID, including related product type details and product type info.",
+                "parameters": [
+                    {
+                        "name": "id",
+                        "in": "path",
+                        "required": true,
+                        "type": "integer",
+                        "description": "ID of the skincare category"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Skincare category found"
+                    },
+                    "404": {
+                        "description": "Skincare category not found"
                     }
                 }
             }

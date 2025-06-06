@@ -11,6 +11,23 @@ class SkinCareCategory(db.Model):
     benefit = db.Column(db.Text, nullable=True)
     how_to_use = db.Column(db.Text, nullable=True)
 
+    product_type_details = db.relationship(
+        "ProductTypeDetail", backref="skincare_category", lazy="dynamic"
+    )
+
+    def to_dict(self):
+        return {
+            "id": self.id,
+            "name": self.name,
+            "slogan": self.slogan,
+            "description": self.description,
+            "benefit": self.benefit,
+            "how_to_use": self.how_to_use,
+            "product_type_details": [
+                detail.to_dict() for detail in self.product_type_details.all()
+            ],
+        }
+
     # # Many-to-many relationship with Benefit through the SkinCareCategoryBenefit table
     # benefits = db.relationship(
     #     "Benefit",

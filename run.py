@@ -13,6 +13,7 @@ import os
 
 def create_app():
     app = Flask(__name__)
+    app.json.sort_keys = False
 
     load_dotenv()
 

@@ -1,9 +1,18 @@
 from app.controllers.hello_controller import hello_bp
-from app.controllers.user_controller import user_bp  # ⬅️ new import
+from app.controllers.user_controller import user_bp
 from app.controllers.upload_controller import upload_bp
+from app.controllers.skincare_category_controller import skincare_category_bp
 
 
 def register_blueprints_routes(app):
+    print("Registering hello_bp...")
     app.register_blueprint(hello_bp)
-    app.register_blueprint(user_bp)  # ⬅️ register new blueprint
+
+    print("Registering user_bp...")
+    app.register_blueprint(user_bp)
+
+    print("Registering upload_bp...")
     app.register_blueprint(upload_bp)
+
+    print("Registering skincare_category_bp...")
+    app.register_blueprint(skincare_category_bp)
