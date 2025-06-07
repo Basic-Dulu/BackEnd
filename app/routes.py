@@ -3,6 +3,7 @@ from app.controllers.user_controller import user_bp
 from app.controllers.upload_controller import upload_bp
 from app.controllers.skincare_category_controller import skincare_category_bp
 from app.controllers.product_controller import product_bp
+from app.controllers.ingredient_controller import ingredient_bp
 
 
 def register_blueprints_routes(app):
@@ -20,3 +21,6 @@ def register_blueprints_routes(app):
 
     print("Registering product_bp...")
     app.register_blueprint(product_bp)
+
+    print("Registering ingredient_bp...")
+    app.register_blueprint(ingredient_bp)

@@ -7,6 +7,8 @@ from seeds.seed_products import seed_products
 from seeds.seed_skincare_category import seed_skincare_categories
 from seeds.seed_product_type import seed_product_types
 from seeds.seed_product_type_detail import seed_product_type_details
+from seeds.seed_ingredient_type import seed_ingredient_types
+from seeds.seed_ingredient import seed_ingredients
 
 # from seeds.seed_posts import seed_posts (when you make it)
 
@@ -22,6 +24,8 @@ with app.app_context():
     seed_skincare_categories()
     seed_product_types()
     seed_product_type_details()
+    seed_ingredient_types()
+    seed_ingredients()
     seed_products()
 
     print("🌱 Done seeding!")

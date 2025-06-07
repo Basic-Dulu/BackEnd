@@ -7,7 +7,7 @@ class Product(db.Model):
     id = db.Column(db.Integer, primary_key=True)
     name = db.Column(db.String(150), nullable=False)
     suitable_for = db.Column(db.String(100), nullable=True)
-    ingredient = db.Column(db.Text, nullable=True)
+    key_ingredient = db.Column(db.Text, nullable=True)
     benefit = db.Column(db.Text, nullable=True)
 
     product_category_id = db.Column(
@@ -16,6 +16,9 @@ class Product(db.Model):
     brand_id = db.Column(db.Integer, db.ForeignKey("brands.id"), nullable=False)
     product_type_detail_id = db.Column(
         db.Integer, db.ForeignKey("product_type_details.id"), nullable=True
+    )
+    ingredient_id = db.Column(
+        db.Integer, db.ForeignKey("ingredients.id"), nullable=True
     )
 
     # Relationships
@@ -39,6 +42,6 @@ class Product(db.Model):
                 }
             ),
             "suitable_for": self.suitable_for,
-            "ingredient": self.ingredient,
+            "key_ingredient": self.key_ingredient,
             "benefit": self.benefit,
         }
