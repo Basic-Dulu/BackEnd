@@ -6,3 +6,4 @@ from .product_type_detail import ProductTypeDetail
 from .skincare_category import SkinCareCategory
 from .ingredient_type import IngredientType
 from .ingredient import Ingredient
+from .skin_test_result import SkinTestResult

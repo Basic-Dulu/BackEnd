@@ -1,5 +1,6 @@
 from flask import Blueprint, request, jsonify, current_app
 from app.models.user import User, db
+from app.models.skin_test_result import SkinTestResult
 from collections import OrderedDict
 from werkzeug.utils import secure_filename
 
@@ -143,6 +144,108 @@ def login_user():
                 "succes": True,
                 "message": "Login Successfull",
                 "token": token,
+            }
+        ),
+        200,
+    )
+
+
+@user_bp.route("/<int:user_id>/skin-test", methods=["PUT"])
+def assign_skin_test_result(user_id):
+    auth_header = request.headers.get("Authorization")
+    if not auth_header or not auth_header.startswith("Bearer "):
+        return jsonify({"success": False, "message": "Missing or Invalid token"}), 401
+
+    token = auth_header.split(" ")[1]
+    try:
+        payload = jwt.decode(
+            token, current_app.config["SECRET_KEY"], algorithms=["HS256"]
+        )
+    except jwt.ExpiredSignatureError:
+        return jsonify({"success": False, "message": "Token expired"}), 401
+    except jwt.InvalidTokenError:
+        return jsonify({"success": False, "message": "Invalid token"}), 401
+
+    if payload["user_id"] != user_id:
+        return jsonify({"success": False, "message": "Unauthorized access"}), 403
+
+    user = User.query.get(user_id)
+    if not user:
+        return jsonify({"success": False, "message": "User not found"}), 404
+
+    data = request.get_json()
+    score = data.get("score")
+    if score is None:
+        return jsonify({"success": False, "message": "Score is required"}), 400
+
+    skin_test_result = SkinTestResult.query.filter(
+        SkinTestResult.min_score <= score, SkinTestResult.max_score >= score
+    ).first()
+
+    if not skin_test_result:
+        return (
+            jsonify(
+                {
+                    "success": False,
+                    "message": "No matching skin test result found for the score",
+                }
+            ),
+            404,
+        )
+
+    user.skin_test_result_id = skin_test_result.id
+    db.session.commit()
+
+    return (
+        jsonify(
+            {
+                "success": True,
+                "message": "Skin test result assigned successfully",
+                "data": user.to_dict(),
+            }
+        ),
+        200,
+    )
+
+
+@user_bp.route("/<int:user_id>/skin-test-result", methods=["GET"])
+def get_user_skin_test_result(user_id):
+    # Extract token from Authorization header
+    auth_header = request.headers.get("Authorization")
+    if not auth_header or not auth_header.startswith("Bearer "):
+        return jsonify({"success": False, "message": "Missing or Invalid token"}), 401
+
+    token = auth_header.split(" ")[1]
+    try:
+        payload = jwt.decode(
+            token, current_app.config["SECRET_KEY"], algorithms=["HS256"]
+        )
+    except jwt.ExpiredSignatureError:
+        return jsonify({"success": False, "message": "Token expired"}), 401
+    except jwt.InvalidTokenError:
+        return jsonify({"success": False, "message": "Invalid token"}), 401
+
+    # Ensure the authenticated user is the same as the one being requested
+    if payload["user_id"] != user_id:
+        return jsonify({"success": False, "message": "Unauthorized access"}), 403
+
+    user = User.query.get(user_id)
+
+    if not user:
+        return jsonify({"success": False, "message": "User not found"}), 404
+
+    if not user.skin_test_result:
+        return (
+            jsonify({"success": False, "message": "User has no skin test result"}),
+            404,
+        )
+
+    return (
+        jsonify(
+            {
+                "success": True,
+                "message": "Skin test result retrieved successfully",
+                "data": user.skin_test_result.to_dict(),
             }
         ),
         200,

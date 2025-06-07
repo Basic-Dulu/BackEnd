@@ -12,6 +12,9 @@ class Ingredient(db.Model):
     ingredient_type_id = db.Column(
         db.Integer, db.ForeignKey("ingredient_types.id"), nullable=True
     )
+    skin_test_result_id = db.Column(
+        db.Integer, db.ForeignKey("skin_test_results.id"), nullable=True
+    )
 
     # Relatinoship
     ingredient_type = db.relationship(
