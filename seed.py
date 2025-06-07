@@ -13,7 +13,8 @@ from seeds import (
     seed_ingredient_types,
     seed_ingredients,
     seed_skin_test_results,
-    # seed_posts  # TODO: Uncomment when implemented
+    seed_skin_test_options,
+    seed_skin_test_questions,
 )
 
 
@@ -35,7 +36,8 @@ def run_seeds():
             seed_users,
             seed_ingredients,
             seed_products,
-            # seed_posts  # TODO: Add posts seed when available
+            seed_skin_test_questions,
+            seed_skin_test_options,
         ]
 
         for seed in seed_functions:

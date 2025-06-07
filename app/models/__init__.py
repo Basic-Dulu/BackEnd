@@ -7,3 +7,5 @@ from .skincare_category import SkinCareCategory
 from .ingredient_type import IngredientType
 from .ingredient import Ingredient
 from .skin_test_result import SkinTestResult
+from .skin_test_question import SkinTestQuestion
+from .skin_test_options import SkinTestOption

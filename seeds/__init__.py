@@ -8,3 +8,5 @@ from .seed_product_type_detail import seed_product_type_details
 from .seed_ingredient_type import seed_ingredient_types
 from .seed_ingredient import seed_ingredients
 from .seed_skin_test_result import seed_skin_test_results
+from .seed_skin_test_option import seed_skin_test_options
+from .seed_skin_test_question import seed_skin_test_questions
