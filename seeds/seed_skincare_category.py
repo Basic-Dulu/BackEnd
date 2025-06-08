@@ -41,3 +41,4 @@ def seed_skincare_categories():
     db.session.add_all(skincare_categories)
     db.session.commit()
     print("✅ Skincare Categories seeded successfully.")
+

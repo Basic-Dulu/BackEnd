@@ -17,6 +17,7 @@ def seed_products():
             brand_id=1,
             product_type_detail_id=1,
             ingredient_id=1,
+            skin_problem_id=1,
         ),
         Product(
             name="Calm Down! Skinpair R-Cover Cream",
@@ -27,6 +28,7 @@ def seed_products():
             brand_id=1,
             product_type_detail_id=2,
             ingredient_id=1,
+            skin_problem_id=1,
         ),
         Product(
             name="Triple Care Sunscreen SPF 40 PA+++",
@@ -37,6 +39,7 @@ def seed_products():
             brand_id=3,
             product_type_detail_id=3,
             ingredient_id=1,
+            skin_problem_id=3,
         ),
     ]
 

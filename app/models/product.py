@@ -20,10 +20,14 @@ class Product(db.Model):
     ingredient_id = db.Column(
         db.Integer, db.ForeignKey("ingredients.id"), nullable=True
     )
+    skin_problem_id = db.Column(
+        db.Integer, db.ForeignKey("skin_problems.id"), nullable=True
+    )
 
     # Relationships
     product_category = db.relationship("ProductCategory", backref="products")
     brand = db.relationship("Brand", backref="products")
+    skin_problem = db.relationship("SkinProblem", backref="products", lazy="joined")
 
     def to_dict(self):
         return {

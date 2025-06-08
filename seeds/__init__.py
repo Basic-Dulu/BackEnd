@@ -10,3 +10,4 @@ from .seed_ingredient import seed_ingredients
 from .seed_skin_test_result import seed_skin_test_results
 from .seed_skin_test_option import seed_skin_test_options
 from .seed_skin_test_question import seed_skin_test_questions
+from .seed_skin_problems import seed_skin_problems

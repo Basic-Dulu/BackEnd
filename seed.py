@@ -15,6 +15,7 @@ from seeds import (
     seed_skin_test_results,
     seed_skin_test_options,
     seed_skin_test_questions,
+    seed_skin_problems,
 )
 
 
@@ -35,6 +36,7 @@ def run_seeds():
             seed_skin_test_results,
             seed_users,
             seed_ingredients,
+            seed_skin_problems,
             seed_products,
             seed_skin_test_questions,
             seed_skin_test_options,

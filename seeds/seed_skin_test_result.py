@@ -16,6 +16,7 @@ def seed_skin_test_results():
             characteristics="Wajah sering terlihat mengilap, terutama di area T-zone (dahi, hidung, dagu); Pori-pori besar dan terlihat jelas; Rentan terhadap jerawat, komedo, dan whiteheads; Produksi sebum (minyak alami) berlebih",
             dos="Pastikan Gizimu Seimbang: Konsumsi makanan yang kaya akan buah, sayur, serta protein tanpa lemak karena nutrisi yang baik itu penting untuk kulit yang sehat.",
             donts="Jangan Skip Pelembap: Biarpun kulitmu berminyak, nggak pakai pelembap bisa bikin kulitmu dehidrasi dan memperparah masalah tekstur kulitmu.",
+            saw_point=0.4,
         ),
         SkinTestResult(
             min_score=13,
@@ -25,6 +26,7 @@ def seed_skin_test_results():
             characteristics="Kulit tampak berminyak di area T-zone, namun kering atau normal di pipi; Pori-pori besar di T-zone; Kadang timbul jerawat di area tertentu; Sulit menemukan skincare yang cocok untuk seluruh wajah",
             dos="Gunakan Skincare yang Seimbang: Pilih produk ringan yang dapat melembapkan bagian kering dan mengontrol minyak di T-zone.",
             donts="Jangan Gunakan Produk Terlalu Berat: Hindari krim yang terlalu kaya atau berminyak yang bisa menyumbat pori di area T-zone.",
+            saw_point=0.3,
         ),
         SkinTestResult(
             min_score=9,
@@ -34,6 +36,7 @@ def seed_skin_test_results():
             characteristics="Kulit terasa kaku dan kering setelah mencuci muka; Permukaan kulit kasar atau bersisik; Pori-pori kecil dan hampir tak terlihat; Kulit mudah iritasi atau kemerahan",
             dos="Gunakan Pelembap Secara Rutin: Pilih pelembap dengan kandungan hyaluronic acid atau ceramide untuk hidrasi ekstra.",
             donts="Hindari Sabun Wajah Keras: Jangan pakai produk pembersih yang mengandung alkohol atau terlalu banyak busa karena bisa menghilangkan kelembapan alami kulit.",
+            saw_point=0.2,
         ),
         SkinTestResult(
             min_score=5,
@@ -43,6 +46,7 @@ def seed_skin_test_results():
             characteristics="Kulit terasa nyaman dan tidak berminyak berlebih atau terlalu kering; Pori-pori tidak terlalu mencolok; Jarang mengalami jerawat; Warna kulit merata dan tampak segar",
             dos="Pertahankan Rutinitas Ringan: Gunakan pembersih yang lembut, pelembap ringan, dan sunscreen setiap hari.",
             donts="Jangan Gonta-Ganti Produk: Hindari mencoba terlalu banyak produk baru sekaligus agar keseimbangan kulit tidak terganggu.",
+            saw_point=0.1,
         ),
     ]
 

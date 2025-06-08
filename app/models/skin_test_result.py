@@ -12,6 +12,7 @@ class SkinTestResult(db.Model):
     characteristics = db.Column(db.Text, nullable=True)
     dos = db.Column(db.Text, nullable=True)
     donts = db.Column(db.Text, nullable=True)
+    saw_point = db.Column(db.Float, nullable=False)
 
     # Relationship
     ingredients = db.relationship(
@@ -31,6 +32,7 @@ class SkinTestResult(db.Model):
             ),
             "dos": self.dos,
             "donts": self.donts,
+            "saw_point": self.saw_point,
             "recommend_ingredients": [
                 ingredient.to_dict() for ingredient in self.ingredients.all()
             ],
