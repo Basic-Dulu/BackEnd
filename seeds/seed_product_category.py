@@ -8,8 +8,11 @@ def seed_product_categories():
         return
 
     product_categories = [
-        ProductCategory(description="SPF"),
+        # 1
+        ProductCategory(description="Sunscreen"),
+        # 2
         ProductCategory(description="Pelembab"),
+        # 3
         ProductCategory(description="Pembersih"),
     ]
 
