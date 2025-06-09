@@ -8,7 +8,7 @@ class Product(db.Model):
     id = db.Column(db.Integer, primary_key=True)
     name = db.Column(db.String(150), nullable=False)
     image = db.Column(db.String(100), nullable=False)
-    suitable_for = db.Column(db.String(100), nullable=True)
+    suitable_for = db.Column(db.Text, nullable=True)
     key_ingredient = db.Column(db.Text, nullable=True)
     benefit = db.Column(db.Text, nullable=True)
 

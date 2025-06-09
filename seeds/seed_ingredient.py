@@ -167,7 +167,6 @@ def seed_ingredients():
             description="Squalane membantu kulit mempertahankan kelembapan dan merupakan emolien, yaitu bahan yang membentuk lapisan pelindung tipis pada kulit untuk menahan kelembapan dan membantu meredakan kulit kering, gatal, atau bersisik. Squalane berasal dari squalene, yang diproduksi secara alami di dalam sebum kulit kita untuk menjaga kulit tetap terhidrasi.",
             benefit="Menghidrasi Kulit, Membantu melawan radikal bebas, Membantu melawan kerusakan kulit",
             image="niacinamide.png",
-            image="niacinamide.png",
             ingredient_type_id=1,  # Lembut
             skin_test_result_id=1,  # Kulit Berminyak
         ),
