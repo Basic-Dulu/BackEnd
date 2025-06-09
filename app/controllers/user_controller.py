@@ -255,12 +255,21 @@ def get_user_skin_test_result(user_id):
             404,
         )
 
+    # Convert the skin test result to dict
+    result_data = user.skin_test_result.to_dict()
+
+    # Inject the user's image URL manually
+    base_url = request.host_url.rstrip("/")
+    result_data["user_image"] = (
+        f"{base_url}/static/uploads/{user.image}" if user.image else None
+    )
+
     return (
         jsonify(
             {
                 "success": True,
                 "message": "Skin test result retrieved successfully",
-                "data": user.skin_test_result.to_dict(),
+                "data": result_data,
             }
         ),
         200,

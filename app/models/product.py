@@ -1,4 +1,5 @@
 from app.extensions import db
+from flask import request
 
 
 class Product(db.Model):
@@ -6,6 +7,7 @@ class Product(db.Model):
 
     id = db.Column(db.Integer, primary_key=True)
     name = db.Column(db.String(150), nullable=False)
+    image = db.Column(db.String(100), nullable=False)
     suitable_for = db.Column(db.String(100), nullable=True)
     key_ingredient = db.Column(db.Text, nullable=True)
     benefit = db.Column(db.Text, nullable=True)
@@ -30,6 +32,8 @@ class Product(db.Model):
     skin_problem = db.relationship("SkinProblem", backref="products", lazy="joined")
 
     def to_dict(self):
+        base_url = request.host_url.rstrip("/")
+
         return {
             "id": self.id,
             "brand": (
@@ -39,6 +43,7 @@ class Product(db.Model):
                 }
             ),
             "name": self.name,
+            "image": f"{base_url}/static/uploads/{self.image}" if self.image else None,
             "product_category": (
                 {
                     "id": self.product_category.id,
