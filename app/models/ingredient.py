@@ -1,4 +1,5 @@
 from app.extensions import db
+from flask import request
 
 
 class Ingredient(db.Model):
@@ -7,6 +8,7 @@ class Ingredient(db.Model):
     id = db.Column(db.Integer, primary_key=True)
     name = db.Column(db.String(150), nullable=False)
     description = db.Column(db.Text, nullable=False)
+    image = db.Column(db.String(100), nullable=False)
     benefit = db.Column(db.Text, nullable=True)
 
     ingredient_type_id = db.Column(
@@ -23,10 +25,13 @@ class Ingredient(db.Model):
     products = db.relationship("Product", backref="ingredient", lazy="dynamic")
 
     def to_dict(self):
+        base_url = request.host_url.rstrip("/")
+
         return {
             "id": self.id,
             "name": self.name,
             "description": self.description,
+            "image": f"{base_url}/static/uploads/{self.image}" if self.image else None,
             "ingredient_type": (
                 {
                     "id": self.ingredient_type.id,

@@ -10,6 +10,7 @@ def seed_products():
     products = [
         Product(
             name="Low pH Gentle Jelly Cleanser",
+            image="low-ph-gentle-jelly-cleanser.png",
             suitable_for="Kulit Sensitif, Kulit Kering, Kulit Berjerawat, Kulit Kemerahan",
             key_ingredient="Madecassoside, Tocopherol, Glycerin, Ceramind NP, Panthenol, Madecassoside, Aloe Barbadensis Leaf Extract, Allantoin, Dipotassium Glycyrrhizate",
             benefit="Menenangkan kemerahan & iritasi ringan, Memproteksi & memperkuat skin barrier, Mengunci kelembapan tanpa menutup pori-pori, Menjaga elastisitas kulit & mencegah tanda penuaan dini",
@@ -21,6 +22,7 @@ def seed_products():
         ),
         Product(
             name="Calm Down! Skinpair R-Cover Cream",
+            image="calm-down-skinpair-r-cover-cream.png",
             suitable_for="Kulit Sensitif, Kulit Kering, Kulit Berjerawat, Kulit Kemerahan",
             key_ingredient="Madecassoside, Tocopherol, Glycerin, Ceramind NP, Panthenol, Aloe Barbadensis Leaf Extract, Allantoin, Dipotassium Glycyrrhizate",
             benefit="Menenangkan kemerahan & iritasi ringan, Memproteksi & memperkuat skin barrier, Mengunci kelembapan tanpa menutup pori-pori, Menjaga elastisitas kulit & mencegah tanda penuaan dini",
@@ -32,6 +34,7 @@ def seed_products():
         ),
         Product(
             name="Triple Care Sunscreen SPF 40 PA+++",
+            image="triple-care-sunscreen-spf-40-pa.png",
             suitable_for="Kulit Sensitif, Kulit Kering, Kulit Berjerawat, Kulit Kemerahan",
             key_ingredient="Madecassoside, Tocopherol, Glycerin, Ceramind NP, Panthenol, Madecassoside, Aloe Barbadensis Leaf Extract, Allantoin, Dipotassium Glycyrrhizate",
             benefit="Menenangkan kemerahan & iritasi ringan, Memproteksi & memperkuat skin barrier, Mengunci kelembapan tanpa menutup pori-pori, Menjaga elastisitas kulit & mencegah tanda penuaan dini",
