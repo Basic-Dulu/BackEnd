@@ -255,14 +255,40 @@ def get_user_skin_test_result(user_id):
             404,
         )
 
+    image = "male-normal.png"
+    if user.gender.lower() == "male":
+        user_skin = user.skin_test_result.name.lower()
+        if user_skin == "kulit berminyak":
+            image = "male-oily.png"
+        elif user_skin == "kulit kombinasi":
+            image = "male-combination.png"
+        elif user_skin == "kulit kering":
+            image = "male-dry.png"
+        elif user_skin == "kulit normal":
+            image = "male-normal.png"
+    elif user.gender.lower() == "female":
+        user_skin = user.skin_test_result.name.lower()
+        if user_skin == "kulit berminyak":
+            image = "female-oily.png"
+        elif user_skin == "kulit kombinasi":
+            image = "female-combination.png"
+        elif user_skin == "kulit kering":
+            image = "female-dry.png"
+        elif user_skin == "kulit normal":
+            image = "female-normal.png"
+    else:
+        return (
+            jsonify(
+                {"success": False, "message": "User's gender should be Male or Female"}
+            ),
+            404,
+        )
     # Convert the skin test result to dict
     result_data = user.skin_test_result.to_dict()
 
     # Inject the user's image URL manually
     base_url = request.host_url.rstrip("/")
-    result_data["user_image"] = (
-        f"{base_url}/static/uploads/{user.image}" if user.image else None
-    )
+    result_data["image"] = f"{base_url}/static/uploads/{image}" if user.image else None
 
     return (
         jsonify(
