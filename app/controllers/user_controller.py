@@ -94,7 +94,22 @@ def create_user():
         return jsonify({"succes": False, "message": "username already exist!"}), 409
 
     # the inputted save into the db
-    new_user = User(email=email, username=username, password=password, gender=gender)
+    if gender.lower() == "male":
+        new_user = User(
+            email=email,
+            username=username,
+            password=password,
+            gender=gender,
+            image="user-male.png",
+        )
+    elif gender.lower() == "female":
+        new_user = User(
+            email=email,
+            username=username,
+            password=password,
+            gender=gender,
+            image="user-female.png",
+        )
     db.session.add(new_user)
     db.session.commit()
 

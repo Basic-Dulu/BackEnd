@@ -1,4 +1,5 @@
 from app.extensions import db
+from flask import request
 
 
 class User(db.Model):
@@ -9,6 +10,7 @@ class User(db.Model):
     username = db.Column(db.String(100), nullable=False)
     password = db.Column(db.String(100), nullable=False)
     gender = db.Column(db.String(100), nullable=False)
+    image = db.Column(db.String(100), nullable=False)
 
     skin_test_result_id = db.Column(
         db.Integer, db.ForeignKey("skin_test_results.id"), nullable=True
@@ -26,11 +28,14 @@ class User(db.Model):
     skin_test_result = db.relationship("SkinTestResult", backref="users", lazy="joined")
 
     def to_dict(self):
+        base_url = request.host_url.rstrip("/")
+
         return {
             "id": self.id,
             "email": self.email,
             "username": self.username,
             "gender": self.gender,
+            "image": f"{base_url}/static/uploads/{self.image}" if self.image else None,
             "skin_test_result": (
                 {
                     "id": self.skin_test_result.id,

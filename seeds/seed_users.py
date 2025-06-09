@@ -13,6 +13,7 @@ def seed_users():
             email="putri@example.com",
             password="putrilaura123",
             gender="Female",
+            image="user-female.png",
             skin_test_result_id=1,
         ),
         User(
@@ -20,6 +21,7 @@ def seed_users():
             email="tententennnnnn@example.com",
             password="tennie123",
             gender="Female",
+            image="user-female.png",
             skin_test_result_id=2,
         ),
         User(
@@ -27,6 +29,7 @@ def seed_users():
             email="faith@binus.ac.id",
             password="fatih123",
             gender="Male",
+            image="user-male.png",
             skin_test_result_id=4,
         ),
     ]
