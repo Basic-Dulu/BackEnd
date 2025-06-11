@@ -10,7 +10,7 @@ def seed_products():
     products = [
         Product(
             name="2 Layer Effortless Cleansing Balm",
-            image="low-ph-gentle-jelly-cleanser.png",
+            image="Cleansing-Balm.png",
             suitable_for="Semua jenis kulit",
             key_ingredient="Elderberry, Mugwort Cica, Watermelon Extract, Blueberry Extract, Centella Asiatica Extract, Artemisia Vulgaris Extract, Sambucus nigra fruit extract",
             benefit="Membersihkan dan mengangkat sisa make up wajah secara menyeluruh dalam 15 detik, Membersihkan make up pada wajah tanpa membuat kulit terasa kering, Kulit lebih halus dan tidak menyumbat pori pori pada wajah, Membantu menghaluskan dan menenangkan kulit",
@@ -22,7 +22,7 @@ def seed_products():
         ),
         Product(
             name="Milk Cleanser Bengkuang",
-            image="low-ph-gentle-jelly-cleanser.png",
+            image="Cleansing-Milk.jpeg",
             suitable_for="Semua jenis kulit",
             key_ingredient="Ekstrak Bengkuang, Ekstrak Sunflower",
             benefit="Susu Pembersih untuk kulit normal, mengandung bahan alami Ekstrak Bengkuang untuk kulit wajah tampak lebih cerah dan Ekstrak Sun Flower untuk merawat elastisitas atau kelenturan kulit wajah",
@@ -34,7 +34,7 @@ def seed_products():
         ),
         Product(
             name="N-Dose+ 2.0 Intensive Brightening Facial Wash",
-            image="low-ph-gentle-jelly-cleanser.png",
+            image="Cream-Cleanser.jpg",
             suitable_for="Semua jenis kulit, kulit kusam",
             key_ingredient="Amino Cleanser, Niacinamide, Oxy229® , Hyalucomplex-10",
             benefit="Membersihkan kulit wajah secara gentle, Membantu mencerahkan kulit,  Membantu proses pengangkatan sel kulit mati",
@@ -46,7 +46,7 @@ def seed_products():
         ),
         Product(
             name="Pure Gentle Cleanser",
-            image="low-ph-gentle-jelly-cleanser.png",
+            image="Gel-Cleanser.png",
             suitable_for="Kulit sensitif berjerawat, kulit normal dan kombinasi",
             key_ingredient="Sodium PCA, Plant Based Surfactant",
             benefit="Membersihkan wajah dari kotoran dan minyak berlebih, menjaga kelembapan kulit, membantu melindungi skin barrier",
@@ -58,7 +58,7 @@ def seed_products():
         ),
         Product(
             name="9X Hyaluronic Acid Gentle Cleansing Mousse",
-            image="low-ph-gentle-jelly-cleanser.png",
+            image="Foaming-Cleanser.jpg",
             suitable_for="Semua jenis kulit",
             key_ingredient="3X Ceramide, 9X Hyaluronic Acid, Niacinamide",
             benefit="Membersihkan wajah dengan lembut, Membersihkan minyak berlebih , Mencegah timbulnya jerawat, Membuat kulit wajah bersih dan lembut",
@@ -70,7 +70,7 @@ def seed_products():
         ),
         Product(
             name="Supple Power Hyaluronic9+Onsen Moisture Bomb Gel",
-            image="low-ph-gentle-jelly-cleanser.png",
+            image="Gel-Moisturizer.jpg",
             suitable_for="Semua jenis kulit, khususnya kulit kering atau kusam",
             key_ingredient="Onsen Sui Water, 9 Type Hyaluronic, Vitamin B5/ Panthenol, Ceramide Complex (NP/AP/EOP), Chondrus Crispus (Carrageenan) Extract",
             benefit="Meremajakan kulit, membantu meningkatkan produksi kolagen, mencegah tanda penuaan dini agar kulit tetap sehat & kenyal sepanjang hari",
@@ -82,7 +82,7 @@ def seed_products():
         ),
         Product(
             name="Luxurious Soft Hydrating Moisturizer",
-            image="low-ph-gentle-jelly-cleanser.png",
+            image="Cream-Moisturizer.JPG",
             suitable_for="Semua jenis kulit",
             key_ingredient="Synoxyl® AZ, AstaMacadamia, dan Madecassoside",
             benefit="Meredakan kemerahan akibat sinar UV, mengembalikan keseimbangan alami kulit, Mengunci kelembapan untuk hidrasi mendalam dan tahan lama, Menjaga elastisitas kulit sekaligus memperkuat lapisan pelindungnya, memberikan tampilan kulit yang lebih sehat dan bercahaya",
@@ -94,7 +94,7 @@ def seed_products():
         ),
         Product(
             name="Physical Sunscreen SPF 50 PA++++",
-            image="low-ph-gentle-jelly-cleanser.png",
+            image="Physical-Sunscreen.png",
             suitable_for="Kulit sensitif",
             key_ingredient="Zinc Oxide dan Titanium Oxide",
             benefit="Menangkal sinar UVA UVB, blue light, dan radikal bebas dari polusi yang disebabkan oleh paparan sinar matahari, membantu menjaga keseimbangan skin microbiome sehingga menjaga kekuatan skin barrier",
@@ -106,7 +106,7 @@ def seed_products():
         ),
         Product(
             name="Sunfriends Sunscreen Gel Noncomedogenic SPF 50 PA++++",
-            image="low-ph-gentle-jelly-cleanser.png",
+            image="Chemical-Sunscreen.png",
             suitable_for="Semua jenis kulit",
             key_ingredient="Matcha, Cica, Betaine",
             benefit="Perlindungan UV, cepat menyerap, ringan, noncomedogenic, dan tidak ada whitecast",
@@ -118,7 +118,7 @@ def seed_products():
         ),
         Product(
             name="Luxurious Perfecting Sunscreen",
-            image="low-ph-gentle-jelly-cleanser.png",
+            image="Hybrid-Sunscreen.JPG",
             suitable_for="Semua jenis kulit",
             key_ingredient="Pollustop, Centella Asiatica, Black Tea, D-Panthenol, Astaxanthin",
             benefit="Memberikan perlindungan optimal dari sinar matahari, menangkal polusi, mengurangi efek buruk sinar matahari",
@@ -130,7 +130,7 @@ def seed_products():
         ),
         Product(
             name="All Skin Types Gloze up Night Pack",
-            image="low-ph-gentle-jelly-cleanser.png",
+            image="AHA-Pelembab.jpg",
             suitable_for="Semua jenis kulit",
             key_ingredient="Tranexamic Acid, Lactic Acid, Vitamin C, Niacinamide, Hexylresorcinol, Vitamin E (Tocopherol)",
             benefit="Membantu mencerahkan dan meratakan warna kulit, mengurangi noda hitam dan tanda-tanda penuaan, menghidrasi dan menjaga kelembapan kulit, melembutkan kulit dan menjaga elastisitas, membuat kulit tetap kenyal dan terhidrasi",
@@ -142,7 +142,7 @@ def seed_products():
         ),
         Product(
             name="Glycolic Brightening Cleanser",
-            image="low-ph-gentle-jelly-cleanser.png",
+            image="AHA-Pembersih.png",
             suitable_for="Kulit normal",
             key_ingredient="Glycolic, D-Panthenol, Allantoin",
             benefit="Mencerahkan kulit wajah, mengangkat sel-sel kulit mati dengan lembut, melembapkan kulit wajah, menyamarkan noda hitam",
@@ -154,7 +154,7 @@ def seed_products():
         ),
         Product(
             name="Protective Tinted Mineral Matte Sunscreen",
-            image="low-ph-gentle-jelly-cleanser.png",
+            image="AHA-SPF.jpg",
             suitable_for="Kulit Berminyak",
             key_ingredient="Rosmarinus Officinalis (Rosemary), Lactic Acid, Leaf Extract, Chrysin, Palmitoyl Tetrapeptide-7",
             benefit="Memberikan perlindungan dari sinar UV, membuat warna kulit lebih merata, dan membantu menyamarkan noda pada kulit",
@@ -166,7 +166,7 @@ def seed_products():
         ),
         Product(
             name="Skinsitive Ultracalm Tender Care Skin Barrier Moisturizer",
-            image="low-ph-gentle-jelly-cleanser.png",
+            image="Allantoin-Pelembab.png",
             suitable_for="Kulit kering dan sensitif",
             key_ingredient="Ceramide Complex, Allantoin, Panthenol, Niacinamide, Shea Butter, AQUAXYL & Squalane",
             benefit="Memperbaiki skin barrier dan menenangkan kulit teriritasi, melembapkan sekaligus memperkuat fungsi pertahanan kulit sehingga kulit menjadi lembap, kenyal, dan sehat",
@@ -178,7 +178,7 @@ def seed_products():
         ),
         Product(
             name="Java Black Tea Soothing Gel Cleanser",
-            image="low-ph-gentle-jelly-cleanser.png",
+            image="Allantoin-Pembersih.jpg",
             suitable_for="Semua jenis kulit",
             key_ingredient="Java Back tea, Cica, Soybean, Lychee Extract, Vitamin B5, Allantoin, Tea Tree Leaf Extract",
             benefit="Membersihkan noda dari pori-pori, minyak berlebih, make-up, dan bersihkan sisa kotoran lainnya pada wajah, menjadikan kulit lebih bersih, segar, dan tenang",
@@ -190,7 +190,7 @@ def seed_products():
         ),
         Product(
             name="The Great Shield SPF 50 PA++++",
-            image="low-ph-gentle-jelly-cleanser.png",
+            image="Allantoin-SPF.png",
             suitable_for="Semua jenis kulit",
             key_ingredient="Allantoin, Chamomile Flower Extract, Sodium Hyaluronate (HA), 3-O-Ethyl Ascorbic Acid, Silica",
             benefit="Melindungi kulit dari paparan sinar UVA dan UVB, membantu menenangkan kulit, membantu mencegah tampilan penuaan dini, serta menyamarkan tampilan pori-pori, merawat elastisitas kulit agar tampak lebih sehat",
@@ -202,7 +202,7 @@ def seed_products():
         ),
         Product(
             name="Nature Daily Aloe Hydramild Multifunction Gel",
-            image="low-ph-gentle-jelly-cleanser.png",
+            image="Aloe-Pelembab.png",
             suitable_for="Semua jenis kulit",
             key_ingredient="Aloe Vera Extract, Allantoin, Biosaccharide-Gum, Beta Glucon",
             benefit="Melembapkan kulitmu secara optimal, merawat elastisitas dan kesegaran kulit, menyejukkan kulit, membantu merawat kulit yang merah dari polusi dan sengatan matahari",
@@ -214,7 +214,7 @@ def seed_products():
         ),
         Product(
             name="Cica + Aloe Low pH Hydramild Facial Wash",
-            image="low-ph-gentle-jelly-cleanser.png",
+            image="Aloe-Pembersih.jpg",
             suitable_for="Semua jenis kulit",
             key_ingredient="Centella Asiatica, Panthenol, Aloe Vera",
             benefit="Mengurangi kemerahan, cegah iritasi, dan mengembalikan kelembaban kulit",
@@ -226,7 +226,7 @@ def seed_products():
         ),
         Product(
             name="Hydrasoothe Sunscreen Gel",
-            image="low-ph-gentle-jelly-cleanser.png",
+            image="Aloe-SPF.jpeg",
             suitable_for="Semua jenis kulit terutama kulit berjerawat, berminyak, dan kombinasi",
             key_ingredient="Royal jelly, Resveratrol, Green tea, Ectoin",
             benefit="Melindungi kulit dari efek negatif sinar UV A & UV B dan menutrisi kulit",
@@ -238,7 +238,7 @@ def seed_products():
         ),
         Product(
             name="YSB Glow Concentrate Treatment 2% Alpha Arbutin + Multi Probiome + Beta Carotene",
-            image="low-ph-gentle-jelly-cleanser.png",
+            image="Alpha-Pelembab.png",
             suitable_for="Kulit wajah yang kering dan kusam",
             key_ingredient="Alpha Arbutin, Multi Probiome, dan Beta Carotene",
             benefit="Membantu mencerahkan dan menyamarkan post-inflammatory hyperpigmentation (PIH) atau bekas jerawat kehitaman",
@@ -250,7 +250,7 @@ def seed_products():
         ),
         Product(
             name="Radiance Double Refresh Brightening SkinBubble",
-            image="low-ph-gentle-jelly-cleanser.png",
+            image="Alpha-Pembersih.png",
             suitable_for="Kulit normal",
             key_ingredient="Alpha Arbutin, Greenth, Micro Scrub, dan Microbiome",
             benefit="Membantu mencerahkan kulit, Membantu mengatasi permasalahan kulit seperti hiperpigmentasi, bintik hitam dan warna kulit yang tidak merata, Membantu membersihkan pori-pori sembari tetap menjaga kelembapan kulit",
@@ -262,7 +262,7 @@ def seed_products():
         ),
         Product(
             name="Antioxidant Suncream",
-            image="low-ph-gentle-jelly-cleanser.png",
+            image="Alpha-SPF.png",
             suitable_for="Semua jenis kulit",
             key_ingredient="Salmon DNA, Titanium Dioxide, Niacinamide, Alpha Arbutin",
             benefit="Mengurangi pigmentasi wajah, melembabkan kulit, melindungi kulit dari UV & paparan sinar matahari, menyamarkan bekas jerawat",
@@ -274,7 +274,7 @@ def seed_products():
         ),
         Product(
             name="Papua Red Fruit Plumping Cream",
-            image="low-ph-gentle-jelly-cleanser.png",
+            image="Bakuchiol-Pelembab.png",
             suitable_for="Semua jenis kulit",
             key_ingredient="LUMERA™ Red Fruit Extract, Bakuchiol, Peptide COmplex, Vitmain E, Camellia Japonica Oil",
             benefit="Merevitalisasi kulit yang kering & dehidrasi secara instan, mengurangi tampilan garis halus & kerutan secara instan, menjaga elastisitas & keremajaan kulit",
@@ -286,7 +286,7 @@ def seed_products():
         ),
         Product(
             name="Calm My Acne Sunscreen Moisturiser",
-            image="low-ph-gentle-jelly-cleanser.png",
+            image="Bakuchiol-SPF.png",
             suitable_for="Dapat digunakan untuk semua jenis kulit namun sangat cocok untuk kulit berjerawat, kulit berminyak, kulit kombinasi, dan kulit sensitif sekalipun",
             key_ingredient="Bakuchiol, Pionin, Canadian Willoherb, Ectoin",
             benefit="Melindungi skin barrier dari paparan sinar UV A & UV B, bluelight, serta polusi",
@@ -298,7 +298,7 @@ def seed_products():
         ),
         Product(
             name="Triple Care Oil Control Acne Calm Moisturizer",
-            image="low-ph-gentle-jelly-cleanser.png",
+            image="BHA-Pelembab.png",
             suitable_for="Kulit berjerawat",
             key_ingredient="Trikenol Plus, Encapsulated Salicylic Acid, Succinic Acid, Madecassoside Pure, Mangosteen Extract",
             benefit="Melembabkan secara instan, meredakan jerawat, menenangkan kulit berjerawat, meredakan kemerahan, mengontrol timbulnya jerawat",
@@ -310,7 +310,7 @@ def seed_products():
         ),
         Product(
             name="Matcha Oat Gentle Gel Cleanser",
-            image="low-ph-gentle-jelly-cleanser.png",
+            image="BHA-Pembersih.png",
             suitable_for="Semua jenis kulit",
             key_ingredient="Matcha, Oat Extract, Heart Leaf, Licorice, Collagen, Kiwi Seed Extract, Allantoin, Salicylic Acid",
             benefit="Menghidrasi, formula tidak mengeringkan, menyegarkan kulit, melindungi kulit dari radikal bebas, membersihkan kulit secara mendalam, tingkat pH 5,5-6,5",
@@ -322,7 +322,7 @@ def seed_products():
         ),
         Product(
             name="Calm Down! Skinpair R-Cover Cream",
-            image="calm-down-skinpair-r-cover-cream.png",
+            image="Centella-Pelembab.jpg",
             suitable_for="Semua jenis kulit, terutama kulit sensitif",
             key_ingredient="CalmDown® by Somethinc®, Madagascar Centella Asiatica, Murumuru butter, Encapsulated Ceramide, Panthenol, Korean Mugwort",
             benefit="Melindungi barrier kulit dengan menghidrasi secara maksimal sepanjang hari, Menghidrasi & menenangkan kulit secara instan",
@@ -334,7 +334,7 @@ def seed_products():
         ),
         Product(
             name="Acne Clear Foam Facial Wash",
-            image="low-ph-gentle-jelly-cleanser.png",
+            image="Centella-Pembersih.png",
             suitable_for="Untuk semua jenis kulit, terutama acne prone skin",
             key_ingredient="Centella Asiatica Extract, Niacinamide, Salicylic Acid, Glutathione, Mild surfactant/SLS Free",
             benefit="Membantu membuat kulit wajah bersih dari debu & polusi, membantu merawat kulit berjerawat",
@@ -346,7 +346,7 @@ def seed_products():
         ),
         Product(
             name="CICA RES-Q10 - AdapTint Sun Shield",
-            image="low-ph-gentle-jelly-cleanser.png",
+            image="Centella-SPF.png",
             suitable_for="Semua jenis kulit",
             key_ingredient="Centella Asiatica",
             benefit="Memberikan perlindungan maksimal dari 5 broad spectrum (UVA, UVB, Bluelight, Infrared, Polusi hingga PM2.5), serta sebagai skin adapting sunscreen, meratakan warna kulit secara instan pada semua jenis tone kulit",
@@ -358,7 +358,7 @@ def seed_products():
         ),
         Product(
             name="Kind Watery Moisturizer - Oily",
-            image="low-ph-gentle-jelly-cleanser.png",
+            image="Ceramide-Pelembab.png",
             suitable_for="Kulit cenderung berminyak",
             key_ingredient="Panthenol, Ceramide, Phytosphingosine, Trehalose, Cholesterol",
             benefit="Menjaga fungsi barrier kulit, menghidrasi, melembabkan",
@@ -370,7 +370,7 @@ def seed_products():
         ),
         Product(
             name="Triple Care Facial Gel Cleanser",
-            image="low-ph-gentle-jelly-cleanser.png",
+            image="Ceramide-Pembersih.png",
             suitable_for="Semua jenis kulit",
             key_ingredient="Oat, Chamomile, Ceramide, Panthenol",
             benefit="Menenangkan, Melembabkan Kulit, Menghilangkan Sel Kulit Mati, Melindungi kulit dari tanda-tanda kerusakan lingkungan yang terlihat, Memperkuat Skin Barrier, Efek Pembersihan Mendalam yang Mencerahkan",
@@ -382,7 +382,7 @@ def seed_products():
         ),
         Product(
             name="UV WaterBarrier Sunscreen",
-            image="low-ph-gentle-jelly-cleanser.png",
+            image="Ceramide-SPF.png",
             suitable_for="Semua jenis kulit",
             key_ingredient="Ceramide, Centella Asiatica, Oat",
             benefit="Melindungi barrier kulit dari UVA, UVB, blue light, polusi, radikal bebas, penuaan dini & kerusakan DNA",
@@ -394,7 +394,7 @@ def seed_products():
         ),
         Product(
             name="Comfort Zone Soothing Moisturizer",
-            image="low-ph-gentle-jelly-cleanser.png",
+            image="Glycerin-Pelembab.png",
             suitable_for="Semua jenis kulit",
             key_ingredient="Glycerin, Panthenol (pro-vitamin B5), Bisabolol, Ceramide",
             benefit="Menjaga kesehatan skin barrier, menenangkan, menghidrasi, dan melembabkan",
@@ -406,7 +406,7 @@ def seed_products():
         ),
         Product(
             name="Solar Smart UV Protector",
-            image="low-ph-gentle-jelly-cleanser.png",
+            image="Glycerin-SPF.png",
             suitable_for="Kulit normal hingga kering",
             key_ingredient="Niacinamide, Cica, Honey, Glycerin",
             benefit="Melindungi optimal dengan SPF 45 yang menangkal 97.8% UVB, dan PA++++ perlindungan tertinggi terhadap UVA yang dapat memicu hyperpigmentasi dan penuaan dini",
@@ -418,7 +418,7 @@ def seed_products():
         ),
         Product(
             name="9x Hyaluronic Acid Emulsion for Normal to Oily Skin",
-            image="low-ph-gentle-jelly-cleanser.png",
+            image="Hyaluronic-Pelembab.jpeg",
             suitable_for="Kulit normal cenderung berminyak",
             key_ingredient="Ceramide, Hyaluronic Acid, Centella Asiatica",
             benefit="Menjaga skin barrier tetap kuat, Menghidrasi dan Melembapkan kulit wajah, Menenangkan kulit yang merah atau iritasi",
@@ -430,7 +430,7 @@ def seed_products():
         ),
         Product(
             name="Skin Barrier Face Gel Cleanser",
-            image="low-ph-gentle-jelly-cleanser.png",
+            image="Hyaluronic-Pembersih.jpg",
             suitable_for="Kulit Kering, Kulit Normal, Kulit Berminyak dan Cenderung Berjerawat, Kulit Sensitif",
             key_ingredient="Ceramide Complex, Hyaluronic Acid, Beatine, Phytospingosine",
             benefit="Membersihkan kotoran dan minyak berlebih pada kulit wajah",
@@ -442,7 +442,7 @@ def seed_products():
         ),
         Product(
             name="White Tea Ultra Light Protective Sun Serum",
-            image="low-ph-gentle-jelly-cleanser.png",
+            image="Hyaluronic-SPF.png",
             suitable_for="Semua jenis kulit",
             key_ingredient="Java White Tea, Heartleaf Extract, Triple Hyaluronic Acid Complex",
             benefit="Melindungi kulit dari paparan sinar UVA dan UVB, memberikan proteksi terhadap polusi, dan menjaga kelembaban kulit",
@@ -454,7 +454,7 @@ def seed_products():
         ),
         Product(
             name="Mugwort Tripeptide Anti-Aging Moisturizer Gel Cream",
-            image="low-ph-gentle-jelly-cleanser.png",
+            image="Mugwort-Pelembab.png",
             suitable_for="Semua jenis kulit, warna kulit tidak merata, kulit berjerawat, kemerahan, dan teriritasi",
             key_ingredient="Mugwort, Bisabolol, Tripeptide",
             benefit="Ringan dan cepat menyerap, menghidrasi dan melembabkan kulit, meredakan kemerahan, meredakan jerawat, anti-aging, dan menghaluskan kulit",
@@ -466,7 +466,7 @@ def seed_products():
         ),
         Product(
             name="Calm Down! Skinpair Bubble Cleanser",
-            image="low-ph-gentle-jelly-cleanser.png",
+            image="Mugwort-Pembersih.jpg",
             suitable_for="Semua jenis kulit, terutama kulit sensitif",
             key_ingredient="CalmDown®, 3D Aqua Seal Technology, Panthenol, Heartleaf, Korean Mugwort, Mild Surfactant",
             benefit="Membersihkan debu, sunscreen, makeup & kotoran dari aktivitas sehari-hari tanpa menghilangkan kelembaban, membantu menenangkan kemerahan, memperkuat skin barrier & menjaga kelembaban dengan minimal gesekan di kulit",
@@ -478,7 +478,7 @@ def seed_products():
         ),
         Product(
             name="Mugwort Daily Sunscreen",
-            image="low-ph-gentle-jelly-cleanser.png",
+            image="Mugwort-SPF.jpg",
             suitable_for="Kulit berjerawat",
             key_ingredient="Mugwort, Centella Asiatica/Cica, Panthenol",
             benefit="Melindungi kulit dari sinar matahari dengan SPF 35 PA+++, Mencegah penuaan dini akibat sinar UV, Mencegah iritasi kulit akibat paparan sinar UV, Membantu merawat kulit berjerawat dengan kandungan calming ingredients",
@@ -490,7 +490,7 @@ def seed_products():
         ),
         Product(
             name="Skin Barrier Water Cream",
-            image="low-ph-gentle-jelly-cleanser.png",
+            image="Niacinamide-Pelembab.jpg",
             suitable_for="Semua jenis kulit",
             key_ingredient="Niacinamide, Hyaluronic Acid, Adenosine, Centella Asiatica (CICA), Ceramide, Ekstrak Semangka",
             benefit="Membantu meningkatkan skin barrier, meningkatkan kelembapan kulit, mempertahankan dan mengunci kelembapan agar kulit tampak lebih kenyal",
@@ -502,7 +502,7 @@ def seed_products():
         ),
         Product(
             name="Skin Barrier Water Cream",
-            image="low-ph-gentle-jelly-cleanser.png",
+            image="Niacinamide-Pelembab.jpg",
             suitable_for="Semua jenis kulit",
             key_ingredient="Niacinamide, Hyaluronic Acid, Adenosine, Centella Asiatica (CICA), Ceramide, Ekstrak Semangka",
             benefit="Membantu meningkatkan skin barrier, meningkatkan kelembapan kulit, mempertahankan dan mengunci kelembapan agar kulit tampak lebih kenyal",
@@ -514,7 +514,7 @@ def seed_products():
         ),
         Product(
             name="Velvet Sunscreen",
-            image="low-ph-gentle-jelly-cleanser.png",
+            image="Niacinamide-SPF.jpeg",
             suitable_for="Kulit normal hingga berminyak",
             key_ingredient="Guaiazulene, Niacinamide",
             benefit="Melindungi kulit dari paparan sinar UV, Mengontrol sebum & minyak berlebih",
@@ -526,7 +526,7 @@ def seed_products():
         ),
         Product(
             name="Cica Care Gel Moisturizer",
-            image="low-ph-gentle-jelly-cleanser.png",
+            image="Oat-Pelembab.png",
             suitable_for="Semua jenis kulit",
             key_ingredient="Centella Asiatica, 5x Ceramide, 8x HA, Oat Extract, Phytosqualane",
             benefit="Menghidrasi dan memperkuat skin barrier, Menenangkan kulit berjerawat & sensitif, Tekstur gel yang ringan untuk kulit berminyak, Aman untuk ibu hamil & ibu menyusui",
@@ -538,7 +538,7 @@ def seed_products():
         ),
         Product(
             name="Triple Care Facial Gel Cleanser",
-            image="low-ph-gentle-jelly-cleanser.png",
+            image="Oat-Pembersih.png",
             suitable_for="Semua jenis kulit",
             key_ingredient="Oat, Chamomile, Ceramide, Panthenol",
             benefit="Menenangkan, Melembabkan Kulit, Menghilangkan Sel Kulit Mati, Melindungi kulit dari tanda-tanda kerusakan lingkungan yang terlihat, Memperkuat Skin Barrier, Efek Pembersihan Mendalam yang Mencerahkan",
@@ -550,7 +550,7 @@ def seed_products():
         ),
         Product(
             name="Oat Probiotic Lightweight Sunscreen",
-            image="low-ph-gentle-jelly-cleanser.png",
+            image="Oat-SPF.jpg",
             suitable_for="Semua jenis kulit termasuk kulit sensitif dan berjerawat",
             key_ingredient="Oat Probiotic, Panthenol, Honey Extract, Centella Asiatica, SPF",
             benefit="Melindungi dari sinar UV dengan SPF 50 dan PA++++, Menjaga kulit tetap sehat dan memperkuat skin barrier",
@@ -562,7 +562,7 @@ def seed_products():
         ),
         Product(
             name="Marine Algae Revitalize Bouncing Hydrating Moisturizer",
-            image="low-ph-gentle-jelly-cleanser.png",
+            image="Panthenol-Pelembab.png",
             suitable_for="Kulit sensitif",
             key_ingredient="Aloe Barbadensis Leaf Water, Niacinamide Snow Algae Powder, Panthenol, Chondrus Crispus Extract Solution",
             benefit="Menghidrasi kulit dari dalam dan memberikan kelembapan secara intensif, Menyamarkan tanda-tanda penuaan dini, Mencerahkan kulit dan membuat kulit tampak lebih muda dan bercahaya, Formula ringan dan mudah menyerap",
@@ -574,7 +574,7 @@ def seed_products():
         ),
         Product(
             name="Barrier+ pH Balance Jelly Cleanser",
-            image="low-ph-gentle-jelly-cleanser.png",
+            image="Panthenol-Pembersih.png",
             suitable_for="Semua jenis kulit",
             key_ingredient="Panthenol, Sage leaf, Oat Kernel",
             benefit="Membersihkan kotoran dan makeup secara mendalam tanpa membuat kulit kering atau tertarik, Menyeimbangkan pH kulit, Melembabkan, menutrisi, dan menjaga level hidrasi kulit",
@@ -586,7 +586,7 @@ def seed_products():
         ),
         Product(
             name="Your Skin Bae Glow Concentrate Treatment Polypeptide",
-            image="low-ph-gentle-jelly-cleanser.png",
+            image="Peptide-Pelembab.jpg",
             suitable_for="Semua jenis kulit",
             key_ingredient="Polypeptide, Multi Probiome, Acetyl Glucosamine, dan Red Algae",
             benefit="menjaga kelembapan kulit wajah, membantu menyamarkan garis halus dan kerutan, serta membuat permukaan kulit tampak lebih halus, membantu menjaga kesehatan dan tekstur kulit, membantu menjaga kelembapan kulit sekaligus membuat kulit tampak lebih halus dan sehat",
@@ -598,7 +598,7 @@ def seed_products():
         ),
         Product(
             name="Protective Tinted Mineral Glow Sunscreen",
-            image="low-ph-gentle-jelly-cleanser.png",
+            image="peptide-SPF.jpg",
             suitable_for="Kulit Berminyak",
             key_ingredient="Rosmarinus Officinalis (Rosemary), Lactic Acid, Leaf Extract, Chrysin, Palmitoyl Tetrapeptide-7",
             benefit="Memberikan perlindungan dari sinar UV, membuat warna kulit lebih merata, dan membantu menyamarkan noda pada kulit",
@@ -610,7 +610,7 @@ def seed_products():
         ),
         Product(
             name="Comfort You Skin Barrier Rehab Facial Wash",
-            image="low-ph-gentle-jelly-cleanser.png",
+            image="PHA-Pembersih.png",
             suitable_for="Kulit kering dan sensitif",
             key_ingredient="Oatmeal (Oat Oil), D-Panthenol, PHA (Gluconolactone), Allantoin",
             benefit="Mengangkat kotoran dan sel-sel kulit mati dengan lembut, serta melembapkan kulit wajah",
@@ -622,7 +622,7 @@ def seed_products():
         ),
         Product(
             name="Bee Power Propolis & Manuka Honey Sleeping Mask",
-            image="low-ph-gentle-jelly-cleanser.png",
+            image="Propolis-Pelembab.jpg",
             suitable_for="Semua jenis kulit",
             key_ingredient="Korean Propolis, Manuka Honey, Bee Venom, Trehalose",
             benefit="Memberi kelembaban & nutrisi di malam hari, Menjadikan kulit tampak lebih glowing keesokan pagi dengan minyak yang lebih terkontrol",
@@ -634,7 +634,7 @@ def seed_products():
         ),
         Product(
             name="Face Wash",
-            image="low-ph-gentle-jelly-cleanser.png",
+            image="Propolis-Pelembab.jpeg",
             suitable_for="Semua jenis kulit",
             key_ingredient="Propolis Extract (Propoelix™), Organic Aloe Vera, Niacinamide (Vitamin B3), Hydrolyzed Algin, Honey, Yogurt, Multivitamins, Inulin",
             benefit="Membersihkan dan hidrasi, kulit cerah berseri, kulit halus dan bernutrisi, memberikan vitalitas dan perlindungan lebih",
@@ -646,7 +646,7 @@ def seed_products():
         ),
         Product(
             name="Fresh Skin Barrier Soothing Cream",
-            image="low-ph-gentle-jelly-cleanser.png",
+            image="Squalane-Pelembab.jpg",
             suitable_for="Kulit kemerahan, kulit normal hingga berminyak dan cenderung berjerawat",
             key_ingredient="Sugarcane Squalane, ProVitamin B5, Mugwort, Cica (Centella asiatica), Black Cumin Seed (Habatussauda)",
             benefit="Menenangkan kulit berjerawat & memperkuat skin barrier",
@@ -658,7 +658,7 @@ def seed_products():
         ),
         Product(
             name="Algaktiv Optimmunist Hydraplus Milky Facial Wash",
-            image="low-ph-gentle-jelly-cleanser.png",
+            image="Squalane-Pembersih.jpg",
             suitable_for="Semua jenis kulit",
             key_ingredient="Algaktiv Optimmunist, Glycerin, Squalane",
             benefit="Membersihkan kulit tanpa rasa ketarik, Diperkaya dengan bahan-bahan untuk melembabkan & menghidrasi kulit, Sensitive skin friendly/aman digunakan untuk kulit sensitif (Telah diuji secara Dermatologis)",
@@ -670,7 +670,7 @@ def seed_products():
         ),
         Product(
             name="Brighter Skin Barrier Pudding",
-            image="low-ph-gentle-jelly-cleanser.png",
+            image="Tranexamic-Pelembab.png",
             suitable_for="Kulit kusam & berjerawat, bekas jerawat dan hiperpigmentasi",
             key_ingredient="Tranexamic Acid, Turmeric, Pumpkin",
             benefit="Menyamarkan bekas jerawat kemerahan PIE & hiperpigmentasi, Mencerahkan wajah, Memperkuat skin barrier, Menjaga hidrasi serta melembapkan wajah",
@@ -682,7 +682,7 @@ def seed_products():
         ),
         Product(
             name="Radiant Glow Jelly Cleanser",
-            image="low-ph-gentle-jelly-cleanser.png",
+            image="Tranexamic-Pembersih.png",
             suitable_for="Kulit kusam, Bekas jerawat kemerahan (PIE), Bekas jerawat kehitaman (PIH), Kulit kotor akibat debu/polusi, Warna kulit tidak merata",
             key_ingredient="Tranexamic Acid, Niacinamide, Kojic Acid, Alpha Arbutin, Glutathione, Melazero, Amino Acid Complex",
             benefit="Membersihkan kotoran secara mendalam tanpa membuat kulit kering, mencerahkan dan meratakan warna kulit, melembutkan dan menyegarkan kulit",
@@ -694,7 +694,7 @@ def seed_products():
         ),
         Product(
             name="UV Shield Tinted Tone Up Sunscreen",
-            image="low-ph-gentle-jelly-cleanser.png",
+            image="Tranexamic-SPF.png",
             suitable_for="Semua jenis kulit",
             key_ingredient="Tranexamic, Bright-Peptide, Color Correct™",
             benefit="Membantu mencerahkan kulit kusam dan noda hitam secara jangka panjang pemakaian, Memiliki hasil yang smooth, tidak lengket, cepat meresap, dan ringan",
@@ -706,7 +706,7 @@ def seed_products():
         ),
         Product(
             name="Glow Booster C-Dose+ Water Moisturizer",
-            image="low-ph-gentle-jelly-cleanser.png",
+            image="Vitc-Pelembab.png",
             suitable_for="Kulit kusam, Kulit kering, Warna kulit tidak merata",
             key_ingredient="Vitamin C EAA, Vitamin C NIO-VCS",
             benefit="Membuat kulit tampak lebih cerah dan bercahaya, Merawat elastisitas kulit, Melembabkan dan menutrisi kulit secara mendalam",
@@ -718,7 +718,7 @@ def seed_products():
         ),
         Product(
             name="C-defense Vitamin C + Panthenol Anti-Pollution Radiant Creamy Wash",
-            image="low-ph-gentle-jelly-cleanser.png",
+            image="Vitc-Pembersih.png",
             suitable_for="Semua jenis kulit, terutama kulit normal dan berminyak",
             key_ingredient="Vitamin C dan Panthenol",
             benefit="Memberikan kesegaran, Membersihkan dan menjaga kelembapan kulit, Mencerahkan, Melindungi dari polusi",
@@ -730,7 +730,7 @@ def seed_products():
         ),
         Product(
             name="Hydramax-C Sunscreen Serum",
-            image="low-ph-gentle-jelly-cleanser.png",
+            image="Vitc-SPF.png",
             suitable_for="Semua jenis kulit terutama kulit normal dan kulit kering",
             key_ingredient="Vitamin C, Hyaluron 11 Multi-complex, Ectoin",
             benefit="Melembabkan dan melindungi kulit dari pengaruh buruk sinar matahari, sinar bluelight dan polusi",
@@ -742,7 +742,7 @@ def seed_products():
         ),
         Product(
             name="Triple Care Sunscreen",
-            image="triple-care-sunscreen-spf-40-pa.png",
+            image="Facetology-Triple-Care-Sunscreen.jpg",
             suitable_for="Kulit normal",
             key_ingredient="Hybrid UV Filters, Blue Oleoactif, Niacinamide, White Ten, Tranexamic Acid, CICA, Mugwort & SyriCalm",
             benefit="Memberikan perlindungan terhadap UV A, UV B & Blue Light, mencerahkan wajah, menengankan dan sebagai anti inflamation agents",
@@ -754,7 +754,7 @@ def seed_products():
         ),
         Product(
             name="Whitening Night Cream",
-            image="low-ph-gentle-jelly-cleanser.png",
+            image="MS-Glow-Whitening-Night-Cream.png",
             suitable_for="Kulit normal",
             key_ingredient="Shea Butter, Glutathione, Arbutin, Aloe Barbadensis Leaf Extract",
             benefit="Mencerahkan kulit",
@@ -766,7 +766,7 @@ def seed_products():
         ),
         Product(
             name="Low pH Gentle Jelly Cleanser",
-            image="low-ph-gentle-jelly-cleanser.png",
+            image="Somethinc-Low-pH-Gentle-Jelly-Cleanser.jpeg",
             suitable_for="Semua jenis kulit, termasuk kulit sensitif",
             key_ingredient="Japanese Mugwort, Tea Tree, Centella Asiatica, Calendula Officinalis, Peppermint",
             benefit="Membersihkan debu, kotoran, & minyak berlebih pada kulit, Menenangkan kulit kembali, Menjaga kulit lebih cerah dan halus, Meminimalisasi terjadinya reaksi sensitisasi",
@@ -778,7 +778,7 @@ def seed_products():
         ),
         Product(
             name="Pure Radiance Barrier Moisturizer",
-            image="low-ph-gentle-jelly-cleanser.png",
+            image="Azarine-Pure-Radiance-Barrier-Moisturizer.jpg",
             suitable_for="Kulit normal hingga berminyak, Kulit berjerawat, Minyak berlebih, Pori-pori besar, Jerawat meradang, Bekas jerawat",
             key_ingredient="Actiwhite, Jeju Green Tea Water, Lipo Amino Acids",
             benefit="Memudarkan bekas jerawat, merapatkan pori-pori, mengontrol minyak",
