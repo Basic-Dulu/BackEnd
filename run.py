@@ -31,7 +31,10 @@ def create_app():
     db.init_app(app)
 
     # CORS setup to allow only your frontend URL
-    CORS(app, resources={r"/*": {"origins": "http://localhost:3000"}})
+    # CORS(app, resources={r"/*": {"origins": "http://localhost:3000"}})
+    # CORS(app, resources={r"/*": {"origins": ["https://basic-dulu-flask.vercel.app"]}})
+    CORS(app, resources={r"/*": {"origins": "*"}})
+
 
     # Register all blueprints
     register_blueprints_routes(app)
