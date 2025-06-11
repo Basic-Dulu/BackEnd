@@ -7,6 +7,7 @@ from app.controllers.ingredient_controller import ingredient_bp
 from app.controllers.skin_test_result_controller import skin_test_result_bp
 from app.controllers.skin_test_question_controller import skin_test_question_bp
 from app.controllers.recommendation_controller import recommendation_bp
+from app.controllers.skin_problem_controller import skin_problem_bp
 
 
 def register_blueprints_routes(app):
@@ -36,3 +37,6 @@ def register_blueprints_routes(app):
 
     print("Registering recommendation_bp...")
     app.register_blueprint(recommendation_bp)
+
+    print("Registering skin_problem_bp...")
+    app.register_blueprint(skin_problem_bp)

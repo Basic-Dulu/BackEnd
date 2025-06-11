@@ -33,6 +33,8 @@ def get_skin_categories():
 
 @skincare_category_bp.route("/<int:id>", methods=["GET"])
 def get_skin_category_by_id(id):
+    base_url = request.host_url.rstrip("/")
+
     skin_category = SkinCareCategory.query.get(id)
 
     if not skin_category:
@@ -64,6 +66,11 @@ def get_skin_category_by_id(id):
         "name": skin_category.name,
         "slogan": skin_category.slogan,
         "description": skin_category.description,
+        "image": (
+            f"{base_url}/static/uploads/{skin_category.image}"
+            if skin_category.image
+            else None
+        ),
         "benefit": skin_category.benefit,
         "how_to_use": skin_category.how_to_use,
         "product_type_details": product_type_details_data,
