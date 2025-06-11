@@ -5,11 +5,7 @@ from app.routes import register_blueprints_routes
 from flask_cors import CORS
 from config import Config
 from dotenv import load_dotenv
-
-# from app import create_app
-
 import os
-
 
 def create_app():
     app = Flask(__name__)
@@ -40,13 +36,15 @@ def create_app():
     # Register all blueprints
     register_blueprints_routes(app)
 
-    # break the CORS
+    # Handle preflight CORS request
     @app.route("/users", methods=["OPTIONS"])
     def options():
-        return "", 200  # Respond with status 200 to OPTIONS requests
+        return "", 200
 
     return app
 
+# Create the app instance for Gunicorn
+app = create_app()
 
 if __name__ == "__main__":
-    create_app().run(host="0.0.0.0", port=8080)
+    app.run(host="0.0.0.0", port=8080)
