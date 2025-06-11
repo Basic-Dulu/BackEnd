@@ -33,10 +33,17 @@ def create_app():
         return jsonify({"Message": "app up and running successfully"})
 
     db.init_app(app)
+
+    # CORS setup to allow only your frontend URL
     CORS(app, resources={r"/*": {"origins": "http://localhost:3000"}})
 
     # Register all blueprints
     register_blueprints_routes(app)
+
+    # break the CORS
+    @app.route("/users", methods=["OPTIONS"])
+    def options():
+        return "", 200  # Respond with status 200 to OPTIONS requests
 
     return app
 
