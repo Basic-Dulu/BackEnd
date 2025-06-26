@@ -6,8 +6,6 @@ from app.extensions import db
 from app.routes import register_blueprints_routes
 from flask_cors import CORS
 from config import Config
-from dotenv import load_dotenv
-load_dotenv()
 import os
 
 def create_app():
