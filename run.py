@@ -1,20 +1,21 @@
+from dotenv import load_dotenv
+load_dotenv()
 from flask import jsonify, Flask, request
 from flask_swagger_ui import get_swaggerui_blueprint
 from app.extensions import db
 from app.routes import register_blueprints_routes
 from flask_cors import CORS
 from config import Config
-from dotenv import load_dotenv
 import os
 
 def create_app():
     app = Flask(__name__)
     app.json.sort_keys = False
 
-    load_dotenv()
+    # load_dotenv()
 
     app.config.from_object(Config)
-    app.config["SECRET_KEY"] = os.getenv("SECRET_KEY")
+    # app.config["SECRET_KEY"] = os.getenv("SECRET_KEY")
 
     SWAGGER_URL = "/swagger"
     API_URL = "/static/swagger.json"
