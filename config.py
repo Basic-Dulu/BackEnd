@@ -9,7 +9,7 @@ class Config:
 
     # Punya Putri
     SQLALCHEMY_DATABASE_URI = os.getenv(
-        "DATABASE_URL"
+        "DATABASE_URI", "mysql+mysqlconnector://root:root123@localhost:3306/basic_dulu_db"
     )
     SQLALCHEMY_TRACK_MODIFICATIONS = False
 
