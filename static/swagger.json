@@ -4,8 +4,9 @@
         "title": "User & Skincare Category API",
         "version": "1.0.0"
     },
+    "host": "backend-solitary-sea-3762.fly.dev",
     "basePath": "/",
-    "schemes": ["http"],
+    "schemes": ["https"],
     "consumes": ["application/json"],
     "produces": ["application/json"],
     "tags": [

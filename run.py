@@ -33,7 +33,7 @@ def create_app():
     # CORS setup to allow only your frontend URL
     # CORS(app, resources={r"/*": {"origins": "http://localhost:3000"}})
     # CORS(app, resources={r"/*": {"origins": ["https://basic-dulu-flask.vercel.app"]}})
-    CORS(app, resources={r"/*": {"origins": "*"}})
+    CORS(app, resources={r"/*": {"origins": "*"}}, supports_credentials=True)
 
 
     # Register all blueprints
