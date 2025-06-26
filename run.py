@@ -17,12 +17,6 @@ def create_app():
     app.config.from_object(Config)
     # app.config["SECRET_KEY"] = os.getenv("SECRET_KEY")
 
-    app.config['SQLALCHEMY_ENGINE_OPTIONS'] = {
-        "connect_args": {
-            "ssl_ca": "/Users/fwz/Basic-Dulu/BackEnd/ca.pem"
-        }
-    }
-
     SWAGGER_URL = "/swagger"
     API_URL = "/static/swagger.json"
 
