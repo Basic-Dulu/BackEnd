@@ -53,7 +53,7 @@ def get_user_by_id(user_id):
 
 
 # for create new user
-@user_bp.route("/", methods=["POST"])
+@user_bp.route("/register", methods=["POST"])
 def create_user():
     data = request.get_json()
     email = data.get("email")
